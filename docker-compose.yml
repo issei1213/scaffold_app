@@ -18,16 +18,7 @@ services:
       - '5432:5432'
     volumes:
       - postgresql-data:/var/lib/postgresql/data
-
-  db:
-    image: mysql:5.7
-    volumes:
-      - db-volume:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-volumes:
-  db-volume:
-
+      
 volumes:
   postgresql-data:
     driver: local
